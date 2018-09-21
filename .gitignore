@@ -1,0 +1,17 @@
+# Compiled
+*.elc
+
+# Backup files
+*~
+
+# Various package related files
+*.~undo-tree
+.persistent-scratch
+ido.last
+recentf
+smex-items
+elpa
+custom.el
+projectile-bookmarks.eld
+
+site-lisp
