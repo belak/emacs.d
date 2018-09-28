@@ -23,6 +23,10 @@
 
   (global-company-mode))
 
+(use-package eldoc
+  :ensure nil
+  :diminish eldoc-mode)
+
 ;; flycheck-mode is used for linters and catching compilation errors.
 
 (use-package flycheck
@@ -45,4 +49,4 @@
 
 (provide 'belak-dev)
 
-;;; belak-dev.el ends here.
+;;; belak-dev.el ends here

@@ -80,6 +80,7 @@
 
 (use-package whitespace
   :ensure nil
+  :diminish global-whitespace-mode
   :config
   (setq whitespace-style '(trailing face tabs tab-mark lines-tail)
         whitespace-display-mappings '((space-mark 32 [183] [46])

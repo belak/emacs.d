@@ -80,4 +80,4 @@
 
 (provide 'belak-core)
 
-;;; belak-core.el ends here.
+;;; belak-core.el ends here
