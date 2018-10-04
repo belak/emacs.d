@@ -23,6 +23,18 @@
 
   (global-company-mode))
 
+;; editorconfig is a simple way to share indentation settings between
+;; editors. Because I sometimes dabble in vim, sublime etc, it's nice
+;; to not have to re-do these settings at a project level between
+;; editors.
+
+(use-package editorconfig
+  :diminish editorconfig-mode
+  :config
+  (editorconfig-mode 1))
+
+;; Used to show relevant documentation in the echo area.
+
 (use-package eldoc
   :ensure nil
   :diminish eldoc-mode)
@@ -35,6 +47,14 @@
   (defalias 'flycheck-show-error-at-point-soon 'flycheck-show-error-at-point)
   (global-flycheck-mode))
 
+;; magit is the best git interface in an editor I've used.
+
+(use-package magit
+  :bind
+  ("M-g M-g" . magit-status)
+  :config
+  (setq magit-push-current-set-remote-if-missing t))
+
 ;; Project based navigation is pretty much the best thing ever.
 
 (use-package projectile
@@ -44,8 +64,8 @@
   :bind-keymap
   ("C-c p" . projectile-command-map)
   :config
-  (projectile-mode +1)
-  (setq projectile-known-projects-file (concat belak-local-dir "projectile-bookmarks.eld")))
+  (setq projectile-known-projects-file (concat belak-local-dir "projectile-bookmarks.eld"))
+  (projectile-mode +1))
 
 (provide 'belak-dev)
 
