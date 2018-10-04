@@ -14,7 +14,8 @@
   :ensure nil
   :if belak-ido-enabled
   :config
-  (setq completion-ignored-extensions
+  (setq ido-save-directory-list-file (expand-file-name "ido.last" belak-local-dir)
+        completion-ignored-extensions
         '(".o" ".elc" "~" ".bin" ".bak" ".obj" ".map" ".a" ".ln" ".mod" ".gz"
           ".aux" ".tdo" ".fmt" ".swp" ".pdfsync" ".pdf" ".vrb" ".idx" ".ind"
           ".bbl" ".toc" ".blg" ".snm" ".ilg" ".log" ".out" ".pyc" ".DS_Store"
@@ -36,7 +37,8 @@
   :bind (("M-x" . smex)
          ("M-X" . smex-major-mode-commands))
   :config
-  (setq smex-history-length 50))
+  (setq smex-history-length 50
+        smex-save-file (expand-file-name "smex-items" belak-local-dir)))
 
 ;; Use ido everywhere possible.
 
