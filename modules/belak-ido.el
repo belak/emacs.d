@@ -6,7 +6,7 @@
 
 ;;; Settings:
 
-(defvar belak-ido-enabled t "Wether ido is enabled or not")
+(defvar belak-ido-enabled t "Wether ido is enabled or not.")
 
 ;;; Code:
 

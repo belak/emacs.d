@@ -6,7 +6,7 @@
 
 ;;; Settings:
 
-(defvar belak-helm-enabled nil "Wether helm is enabled or not")
+(defvar belak-helm-enabled nil "Wether helm is enabled or not.")
 
 ;;; Code:
 
