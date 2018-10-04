@@ -32,8 +32,9 @@
 (use-package anaconda-mode
   :diminish anaconda-mode
   :after python
+  :hook python-mode
   :config
-  (add-hook 'python-mode-hook 'anaconda-mode))
+  (add-hook 'anaconda-mode-hook 'anaconda-eldoc-mode))
 
 (use-package company-anaconda
   :after (anaconda-mode company)
