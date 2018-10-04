@@ -11,8 +11,12 @@
   (require 'belak-packages)
   (require 'belak-ui)
 
-  ;; TODO: helm and ido should be mutually exclusive but you can technically
-  ;; enable both.
+  ;; We use an bizarre mix between evil and emacs. I try to use emacs
+  ;; for navigation, but emacs for almost everything else.
+  (require 'belak-evil)
+
+  ;; NOTE: helm and ido should be mutually exclusive but you can
+  ;; technically enable both.
   (require 'belak-ido)
   (require 'belak-helm)
 
