@@ -25,5 +25,6 @@
 
   ;; Load language bundles
   (require 'belak-lang-elixir)
+  (require 'belak-lang-go)
   (require 'belak-lang-python)
   )
