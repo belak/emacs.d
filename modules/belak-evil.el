@@ -14,6 +14,7 @@
   :diminish evil-mode
   :init
   (setq evil-echo-state t
+	evil-want-C-w-in-emacs-state t
 	;; We want to let evil-collection set keybinds for any
 	;; additional modes.
 	evil-want-integration t
