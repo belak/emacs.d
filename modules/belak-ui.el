@@ -5,6 +5,7 @@
 ;;; Code:
 
 ;; Remove most gui features because I rarely use any of them.
+
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -14,12 +15,19 @@
 (setq echo-keystrokes 0.1)
 
 ;; Various appearance settings
+
 (setq column-number-mode t
       line-number-mode t
       tooltip-delay 0
       tooltip-short-delay 0)
 
+;; Ensure the help window is selected when one is open. This makes it
+;; much easier to quit them when we're done.
+
+(setq help-window-select t)
+
 ;; Highlight between matching parens
+
 (electric-pair-mode 1)
 
 ;; Highlight the current column
