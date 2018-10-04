@@ -39,6 +39,13 @@
   :ensure nil
   :diminish eldoc-mode)
 
+;; Grab important variables from our shell.
+
+(use-package exec-path-from-shell
+  :if IS-GUI
+  :config
+  (exec-path-from-shell-initialize))
+
 ;; flycheck-mode is used for linters and catching compilation errors.
 
 (use-package flycheck

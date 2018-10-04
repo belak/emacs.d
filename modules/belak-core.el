@@ -6,8 +6,9 @@
 
 ;; Constants
 
-(defconst IS_MAC   (eq system-type 'darwin))
+(defconst IS-MAC   (eq system-type 'darwin))
 (defconst IS-LINUX (eq system-type 'gnu/linux))
+(defconst IS-GUI   (memq window-system '(mac ns x)))
 
 ;; Bootstrap helpers
 
