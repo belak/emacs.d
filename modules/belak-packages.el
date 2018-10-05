@@ -9,7 +9,8 @@
 
 (require 'package)
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("gnu"   . "https://elpa.gnu.org/packages/")))
+                         ("gnu"   . "https://elpa.gnu.org/packages/")
+                         ("org"   . "https://orgmode.org/elpa/")))
 (setq package-enable-at-startup nil)
 
 ;; Hack around the nonsense which will add a call to

@@ -20,6 +20,10 @@
   (require 'belak-ido)
   (require 'belak-helm)
 
+  ;; org-mode is special enough to deserve its own section and not be
+  ;; lumped in with the lang bundles.
+  (require 'belak-org)
+
   ;; Load dev packages
   (require 'belak-dev)
 

@@ -1,0 +1,51 @@
+* Belak's Emacs Config
+
+** Settings
+
+*** Directories
+
+- =belak-local-dir= Which directory will be used for temporary files.
+
+*** Features
+
+- =belak-evil-enabled= Whether or not =evil-mode= should be enabled.
+- =belak-ido-enabled=  Whether or not =ido= is used as the selection framework.
+- =belak-helm-enabled= Whether or not =helm= is used as the selection framework.
+
+** Modules
+
+Theses are listed in the order they are loaded by init.el. The load
+order is actually important in some instances, at least for core
+packages.
+
+*** =belak-core=
+*** =belak-packages=
+*** =belak-ui=
+*** =belak-evil=
+*** =belak-ido=
+*** =belak-helm=
+*** =belak-org=
+*** =belak-dev=
+
+** Language Modules
+
+*** =belak-lang-elixir=
+*** =belak-lang-go=
+*** =belak-lang-python=
+
+** TODO
+
+- [ ] =org=
+- [ ] =org-agenda=
+- [ ] =org-capture=
+- [ ] =evil-org=
+- [ ] Try out =ivy=
+- [ ] Replace =belak-ido-enabled= and =belak-helm-enabled= with a
+  single variable
+- [ ] Configure circe, similar to how smf does it
+- [ ] Finish porting over my config from my dotfiles
+- [ ] Update my helm config, possibly from
+  https://github.com/compunaut/helm-ido-like-guide
+- [ ] Investigate moving from =bind-key= to =general= for key bindings
+- [ ] Add some custom =evil-mode= bindings
+- [ ] =which-key=, =guide-key=?
