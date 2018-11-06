@@ -97,6 +97,12 @@
   (global-whitespace-mode t)
   (setq whitespace-global-modes '(text-mode prog-mode org-mode)))
 
+;; Additional modes to diminish
+(diminish 'auto-fill-function)
+(use-package undo-tree
+  :ensure nil
+  :diminish undo-tree-mode)
+
 (provide 'belak-ui)
 
 ;;; belak-ui.el ends here
