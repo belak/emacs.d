@@ -4,7 +4,7 @@
 
 ;;; Settings:
 
-(defvar belak-evil-enabled t)
+(defvar belak-evil-enabled nil)
 
 ;;; Code:
 
