@@ -57,7 +57,9 @@
 (eval-when-compile
   (defvar use-package-verbose t)
   (require 'use-package)
+  (require 'diminish)
   (require 'general))
+
 
 ;; Attempt to install packages unless we specify otherwise.
 
