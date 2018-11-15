@@ -1,4 +1,4 @@
-;;; belak-ivy.el --- ivy related packages and settings
+;;; belak-completion-ivy.el --- ivy related packages and settings
 
 ;;; Commentary:
 
@@ -18,6 +18,6 @@
   :config
   (counsel-mode 1))
 
-(provide 'belak-ivy)
+(provide 'belak-completion-ivy)
 
-;;; belak-ivy.el ends here
+;;; belak-completion-ivy.el ends here

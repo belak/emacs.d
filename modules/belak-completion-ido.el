@@ -1,4 +1,4 @@
-;;; belak-ido.el --- ido related config
+;;; belak-completion-ido.el --- ido related config
 
 ;;; Commentary:
 
@@ -69,6 +69,6 @@
   (setq ido-enable-flex-matching t
         flx-ido-threshold 10000))
 
-(provide 'belak-ido)
+(provide 'belak-completion-ido)
 
-;;; belak-ido.el ends here
+;;; belak-completion-ido.el ends here

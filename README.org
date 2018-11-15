@@ -9,8 +9,8 @@
 *** Features
 
 - =belak-evil-enabled= Whether or not =evil-mode= should be enabled.
-- =belak-ido-enabled=  Whether or not =ido= is used as the selection framework.
-- =belak-helm-enabled= Whether or not =helm= is used as the selection framework.
+- =belak-completion-system= Which completion system to use (helm, ido,
+  ivy, or nil)
 
 ** Modules
 
@@ -22,30 +22,32 @@ packages.
 *** =belak-packages=
 *** =belak-ui=
 *** =belak-evil=
-*** =belak-ido=
-*** =belak-helm=
 *** =belak-org=
 *** =belak-dev=
+
+** Completion Systems
+
+*** =belak-completion-ido=
+*** =belak-completion-helm=
+*** =belak-completion-ivy=
 
 ** Language Modules
 
 *** =belak-lang-elixir=
 *** =belak-lang-go=
+*** =belak-lang-javascript=
 *** =belak-lang-python=
+*** =belak-lang-rust=
+*** =belak-lang-other=
 
-** TODO
+** Future Ideas
 
 - [ ] =org=
 - [ ] =org-agenda=
 - [ ] =org-capture=
 - [ ] =evil-org=
-- [ ] Try out =ivy=
-- [ ] Replace =belak-ido-enabled= and =belak-helm-enabled= with a
-  single variable
 - [ ] Configure circe, similar to how smf does it
 - [ ] Finish porting over my config from my dotfiles
 - [ ] Update my helm config, possibly from
   https://github.com/compunaut/helm-ido-like-guide
-- [ ] Investigate moving from =bind-key= to =general= for key bindings
 - [ ] Add some custom =evil-mode= bindings
-- [ ] =which-key=, =guide-key=?

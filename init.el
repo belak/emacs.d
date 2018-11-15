@@ -15,11 +15,13 @@
   ;; for navigation, but emacs for almost everything else.
   (require 'belak-evil)
 
-  ;; NOTE: helm and ido should be mutually exclusive but you can
-  ;; technically enable both.
-  (require 'belak-ido)
-  (require 'belak-ivy)
-  (require 'belak-helm)
+  ;; There's a global setting which switches the enabled completion
+  ;; module, but we load all of them so that setting will
+  ;; work. Everything is in use-package blocks so this should still be
+  ;; a fairly cheap operation.
+  (require 'belak-completion-ido)
+  (require 'belak-completion-ivy)
+  (require 'belak-completion-helm)
 
   ;; org-mode is special enough to deserve its own section and not be
   ;; lumped in with the lang bundles.

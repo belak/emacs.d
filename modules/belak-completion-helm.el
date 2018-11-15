@@ -1,4 +1,4 @@
-;;; belak-helm.el --- helm related config
+;;; belak-completion-helm.el --- helm related config
 
 ;;; Commentary:
 
@@ -66,6 +66,6 @@
   (setq projectile-completion-system 'helm)
   (helm-projectile-on))
 
-(provide 'belak-helm)
+(provide 'belak-completion-helm)
 
-;;; belak-helm.el ends here
+;;; belak-completion-helm.el ends here
