@@ -12,18 +12,22 @@
 - =belak-completion-system= Which completion system to use (helm, ido,
   ivy, or nil)
 
-** Modules
+** Core Modules
 
 Theses are listed in the order they are loaded by init.el. The load
 order is actually important in some instances, at least for core
-packages.
+packages. Most of these are core modules which change how the editor
+works in some way.
 
 *** =belak-core=
 *** =belak-packages=
 *** =belak-ui=
 *** =belak-evil=
-*** =belak-org=
 *** =belak-dev=
+
+** Feature Modules
+
+*** =belak-org=
 
 ** Completion Systems
 
