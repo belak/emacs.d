@@ -86,6 +86,18 @@
         spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
   (spaceline-spacemacs-theme))
 
+(use-package which-key
+  :defer 1
+  :diminish which-key-mode
+  :config
+  (setq which-key-sort-order #'which-key-prefix-then-key-order
+        which-key-sort-uppercase-first nil
+        which-key-add-column-padding 1
+        which-key-max-display-columns nil
+        which-key-min-display-lines 6
+        which-key-side-window-slot -10)
+  (which-key-mode 1))
+
 (use-package whitespace
   :ensure nil
   :diminish global-whitespace-mode
