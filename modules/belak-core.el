@@ -4,6 +4,10 @@
 
 ;;; Code:
 
+;; Settings
+
+(defvar belak-completion-system 'ido)
+
 ;; Constants
 
 (defconst IS-MAC   (eq system-type 'darwin))

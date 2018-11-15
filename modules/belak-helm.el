@@ -4,16 +4,15 @@
 
 ;; Helm is a much fancier replacement for ido.
 
-;;; Settings:
-
-(defvar belak-helm-enabled nil "Wether helm is enabled or not.")
-
 ;;; Code:
+
+(defun helm-enabled-p ()
+  (eq belak-completion-system 'helm))
 
 (use-package helm
   :defer 2
   :diminish helm-mode
-  :if belak-helm-enabled
+  :if (helm-enabled-p)
   :general
   ("M-x"     'helm-M-x)
   ("C-x b"   'helm-mini)
@@ -42,14 +41,14 @@
         helm-completion-in-region-fuzzy-match t))
 
 (use-package helm-ag
-  :if belak-helm-enabled
+  :if (helm-enabled-p)
   :after helm
   :commands
   helm-ag
   helm-ag-project-root)
 
 (use-package helm-swoop
-  :if belak-helm-enabled
+  :if (helm-enabled-p)
   :after helm
   :general
   ("C-S-s" 'helm-swoop)
@@ -61,7 +60,7 @@
 ;; currently disabled.
 
 (use-package helm-projectile
-  :if belak-helm-enabled
+  :if (helm-enabled-p)
   :after (helm projectile)
   :config
   (setq projectile-completion-system 'helm)

@@ -18,6 +18,7 @@
   ;; NOTE: helm and ido should be mutually exclusive but you can
   ;; technically enable both.
   (require 'belak-ido)
+  (require 'belak-ivy)
   (require 'belak-helm)
 
   ;; org-mode is special enough to deserve its own section and not be

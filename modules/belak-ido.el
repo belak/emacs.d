@@ -4,15 +4,14 @@
 
 ;; ido (interactively-do) is a better interface for selecting things.
 
-;;; Settings:
-
-(defvar belak-ido-enabled t "Wether ido is enabled or not.")
-
 ;;; Code:
+
+(defun ido-enabled-p ()
+  (eq belak-completion-system 'ido))
 
 (use-package ido
   :ensure nil
-  :if belak-ido-enabled
+  :if (ido-enabled-p)
   :config
   (setq ido-save-directory-list-file (expand-file-name "ido.last" belak-local-dir)
         completion-ignored-extensions
@@ -33,7 +32,7 @@
 
 (use-package smex
   :after ido
-  :if belak-ido-enabled
+  :if (ido-enabled-p)
   :general
   ("M-x" 'smex)
   ("M-X" 'smex-major-mode-commands)
@@ -45,7 +44,7 @@
 
 (use-package ido-completing-read+
   :after ido
-  :if belak-ido-enabled
+  :if (ido-enabled-p)
   :config
   (ido-ubiquitous-mode 1))
 
@@ -54,7 +53,7 @@
 
 (use-package ido-vertical-mode
   :after ido
-  :if belak-ido-enabled
+  :if (ido-enabled-p)
   :config
   (setq ido-vertical-define-keys 'C-n-C-p-up-down-left-right
         ido-vertical-show-count t)
@@ -65,7 +64,7 @@
 
 (use-package flx-ido
   :after ido
-  :if belak-ido-enabled
+  :if (ido-enabled-p)
   :config
   (setq ido-enable-flex-matching t
         flx-ido-threshold 10000))
