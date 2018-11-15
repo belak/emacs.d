@@ -31,5 +31,7 @@
   ;; Load language bundles
   (require 'belak-lang-elixir)
   (require 'belak-lang-go)
+  (require 'belak-lang-javascript)
   (require 'belak-lang-python)
-  )
+  (require 'belak-lang-rust)
+  (require 'belak-lang-other))
