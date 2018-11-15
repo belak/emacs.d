@@ -8,6 +8,8 @@
   :pin org
   :ensure org-plus-contrib
   :mode ("\\.org\\'" . org-mode)
+  :general
+  ("C-c o a" 'org-agenda)
   :config
   (setq org-log-done t
         org-log-done-with-time t

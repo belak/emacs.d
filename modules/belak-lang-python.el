@@ -18,8 +18,9 @@
 
 (use-package python-switch-quotes
   :after python
-  :bind (:map python-mode-map
-              ("C-c '" . python-switch-quotes)))
+  :general
+  (:keymaps 'python-mode-map
+            "C-c '" 'python-switch-quotes))
 
 ;; After doing python dev for a while, it's nice to be able to tweak
 ;; my setup. After trying other major packages (elpy and jedi) I've

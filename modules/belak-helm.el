@@ -14,17 +14,19 @@
   :defer 2
   :diminish helm-mode
   :if belak-helm-enabled
-  :bind (("M-x"     . helm-M-x)
-         ("C-x b"   . helm-mini)
-         ("C-x C-f" . helm-find-files)
+  :general
+  ("M-x"     'helm-M-x)
+  ("C-x b"   'helm-mini)
+  ("C-x C-f" 'helm-find-files)
 
-         ;; Reverse tab and C-z
-         :map helm-map
-         ("<tab>" . helm-execute-persistent-action)
-         ("C-z"   . helm-select-action)
+  ;; Reverse tab and C-z
+  (:keymaps 'helm-map
+            "<tab>" 'helm-execute-persistent-action
+            "C-z"   'helm-select-action)
 
-         :map org-mode-map
-         ("C-c h" . helm-org-in-buffer-headings))
+  (:keymaps 'org-mode-map
+         "C-c h" 'helm-org-in-buffer-headings)
+
   :config
   (helm-mode 1)
 
@@ -49,7 +51,8 @@
 (use-package helm-swoop
   :if belak-helm-enabled
   :after helm
-  :bind ("C-S-s" . helm-swoop)
+  :general
+  ("C-S-s" 'helm-swoop)
   :config
   (setq helm-swoop-speed-or-color t
         helm-swoop-pre-input-function (lambda () "")))

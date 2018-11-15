@@ -34,8 +34,9 @@
 (use-package smex
   :after ido
   :if belak-ido-enabled
-  :bind (("M-x" . smex)
-         ("M-X" . smex-major-mode-commands))
+  :general
+  ("M-x" 'smex)
+  ("M-X" 'smex-major-mode-commands)
   :config
   (setq smex-history-length 50
         smex-save-file (expand-file-name "smex-items" belak-local-dir)))

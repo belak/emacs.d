@@ -52,11 +52,12 @@
 
 (belak--package-ensure-installed 'use-package)
 (belak--package-ensure-installed 'diminish)
-(belak--package-ensure-installed 'bind-key)
+(belak--package-ensure-installed 'general)
 
 (eval-when-compile
   (defvar use-package-verbose t)
-  (require 'use-package))
+  (require 'use-package)
+  (require 'general))
 
 ;; Attempt to install packages unless we specify otherwise.
 

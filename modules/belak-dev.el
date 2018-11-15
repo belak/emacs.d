@@ -57,8 +57,8 @@
 ;; magit is the best git interface in an editor I've used.
 
 (use-package magit
-  :bind
-  ("M-g M-g" . magit-status)
+  :general
+  ("M-g M-g" 'magit-status)
   :config
   (setq magit-push-current-set-remote-if-missing t))
 
@@ -68,8 +68,8 @@
   :diminish projectile-mode
   :commands
   projectile-project-p
-  :bind-keymap
-  ("C-c p" . projectile-command-map)
+  :general
+  ("C-c p" '(:keymap projectile-command-map))
   :config
   (setq projectile-known-projects-file (concat belak-local-dir "projectile-bookmarks.eld"))
   (projectile-mode +1))
