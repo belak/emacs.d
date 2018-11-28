@@ -7,6 +7,7 @@
 ;; company-mode is used as a completion system.
 
 (use-package company
+  :defer 2
   :diminish company-mode
   :config
   (defmacro belak--register-company-backend (hook backend)
@@ -15,11 +16,15 @@
 
   (setq company-tooltip-limit 20
         company-idle-delay 0
-        company-echo-delay 0
         company-minimum-prefix-length 1
         company-selection-wrap-around t
         company-show-numbers t
         company-tooltip-align-annotations t)
+
+  ;; Tab-N-Go seems to align better than the defaults with how I like
+  ;; tab completion to work. This allows tab to cycle through entries
+  ;; and makes the enter key work as the enter key.
+  (company-tng-configure-default)
 
   (global-company-mode))
 
