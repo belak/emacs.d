@@ -50,8 +50,25 @@
 (setq locale-coding-system   'utf-8)   ; please
 (setq-default buffer-file-coding-system 'utf-8) ; with sugar on top
 
-;; Directories
+;; Ensure meta and command don't get messed up in emacs-mac
+(if IS-MAC
+    (progn (setq mac-command-modifier 'super)
+           (setq mac-option-modifier 'meta)))
 
+;; Fix zapping
+
+;; Make M-z zap-up-to-char (doesn't include char)
+(autoload 'zap-up-to-char "misc" "" 'interactive)
+(global-set-key "\M-z" 'zap-up-to-char)
+
+;; Make M-Z zap in reverse
+(defun reverse-zap-up-to-char (char)
+  "Zap back to CHAR."
+  (interactive "cZap back to char: ")
+  (zap-up-to-char -1 char))
+(global-set-key "\M-Z" 'reverse-zap-up-to-char)
+
+;; Directories
 (defvar belak-emacs-dir user-emacs-directory)
 (defvar belak-local-dir (concat belak-emacs-dir ".local/"))
 
