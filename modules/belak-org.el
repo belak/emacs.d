@@ -29,6 +29,8 @@
   :config
   (setq org-journal-dir "~/Dropbox/journal"
         org-journal-file-format "%Y-%m-%d.org"
+        org-journal-date-format "%d %b %Y (%A)"
+        org-journal-time-format "%I:%M %p"
         org-extend-today-until 4))
 
 (provide 'belak-org)

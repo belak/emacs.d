@@ -55,19 +55,6 @@
     (progn (setq mac-command-modifier 'super)
            (setq mac-option-modifier 'meta)))
 
-;; Fix zapping
-
-;; Make M-z zap-up-to-char (doesn't include char)
-(autoload 'zap-up-to-char "misc" "" 'interactive)
-(global-set-key "\M-z" 'zap-up-to-char)
-
-;; Make M-Z zap in reverse
-(defun reverse-zap-up-to-char (char)
-  "Zap back to CHAR."
-  (interactive "cZap back to char: ")
-  (zap-up-to-char -1 char))
-(global-set-key "\M-Z" 'reverse-zap-up-to-char)
-
 ;; Directories
 (defvar belak-emacs-dir user-emacs-directory)
 (defvar belak-local-dir (concat belak-emacs-dir ".local/"))
@@ -95,6 +82,23 @@
  ;; Increasing the minimum prime bits size to something larger than the
  ;; default settings stops all the GnuTLS warnings from showing up.
  gnutls-min-prime-bits 4096)
+
+;; Tweaks
+
+;; Replace yes-or-no prompts with y or n
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+;; Make M-z zap-up-to-char (doesn't include char) rather than
+;; zap-to-char.
+(autoload 'zap-up-to-char "misc" "" 'interactive)
+(global-set-key "\M-z" 'zap-up-to-char)
+
+;; Make M-Z zap in reverse
+(defun reverse-zap-up-to-char (char)
+  "Zap back to CHAR."
+  (interactive "cZap back to char: ")
+  (zap-up-to-char -1 char))
+(global-set-key "\M-Z" 'reverse-zap-up-to-char)
 
 ;; We still want to be able to have non-public configs, such as for
 ;; passwords and what not, so we put them in a separate file and load
