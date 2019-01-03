@@ -21,6 +21,16 @@
 
   (add-hook 'org-mode-hook 'auto-fill-mode))
 
+(use-package org-journal
+  :after org
+  :general
+  ("C-c C-j" 'org-journal-new-entry)
+  ("C-c C-s" 'org-journal-search)
+  :config
+  (setq org-journal-dir "~/Dropbox/journal"
+        org-journal-file-format "%Y-%m-%d.org"
+        org-extend-today-until 4))
+
 (provide 'belak-org)
 
 ;;; belak-org.el ends here
