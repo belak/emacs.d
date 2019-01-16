@@ -56,7 +56,6 @@
 (use-package flycheck
   :diminish flycheck-mode
   :config
-  (defalias 'flycheck-show-error-at-point-soon 'flycheck-show-error-at-point)
   (global-flycheck-mode))
 
 ;; magit is the best git interface in an editor I've used.
@@ -78,6 +77,10 @@
   :config
   (setq projectile-known-projects-file (concat belak-local-dir "projectile-bookmarks.eld"))
   (projectile-mode +1))
+
+;; rainbow-mode makes it easier to see colors
+(use-package rainbow-mode
+  :commands rainbow-mode)
 
 (provide 'belak-dev)
 

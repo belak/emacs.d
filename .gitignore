@@ -16,3 +16,6 @@ projectile-bookmarks.eld
 
 site-lisp
 .local
+
+# Stuff that should be cleaned up eventually
+anaconda-mode

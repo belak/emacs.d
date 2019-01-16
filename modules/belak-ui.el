@@ -37,12 +37,19 @@
 ;; Packages
 
 (use-package base16-theme
+  :disabled t
   :demand
   :ensure nil
   :load-path "site-lisp/base16-theme"
   :init
   (add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/base16-theme/build")
   :config (load-theme 'base16-default-dark t))
+
+(use-package monokai-pro-theme
+  :demand
+  :ensure nil
+  :load-path "site-lisp/monokai-pro-theme"
+  :config (load-theme 'monokai-pro t))
 
 ;; I originally used fic-mode, but it appears that hl-todo is a little
 ;; better and is updated more frequently.

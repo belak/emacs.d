@@ -23,12 +23,11 @@
   (require 'belak-completion-ivy)
   (require 'belak-completion-helm)
 
+  ;; Load additional features
+  (require 'belak-org)
+
   ;; Load dev packages
   (require 'belak-dev)
-
-  ;; org-mode is special enough to deserve its own section and not be
-  ;; lumped in with the lang bundles.
-  (require 'belak-org)
 
   ;; Load language bundles
   (require 'belak-lang-elixir)

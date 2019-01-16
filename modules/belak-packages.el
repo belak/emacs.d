@@ -50,7 +50,8 @@
 ;; common operations easier. We install it right after loading
 ;; package.el so we can use it to install everything else.
 
-(belak--package-ensure-installed 'use-package)
+(eval-when-compile
+  (belak--package-ensure-installed 'use-package))
 (belak--package-ensure-installed 'diminish)
 (belak--package-ensure-installed 'general)
 
