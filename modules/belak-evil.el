@@ -56,6 +56,14 @@
   ;; leader.
   (evilem-default-keybindings "SPC"))
 
+(use-package evil-goggles
+  :after evil
+  :config
+  (evil-goggles-mode)
+
+  ;; TODO: Add these to base16 and monokai-pro.
+  (evil-goggles-use-diff-faces))
+
 ;; Add % as a bind to jump between matching tags.
 
 (use-package evil-matchit
