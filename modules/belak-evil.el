@@ -23,7 +23,23 @@
   ;; TODO: Not sure why this has to be called here.
   ;;(general-evil-setup)
   ;; Actually enable evil-mode.
-  (evil-mode 1))
+  (evil-mode 1)
+
+  (defun belak--update-evil-state-cursor-colors ()
+    ;; Pull evil-mode faces from the current theme
+    (setq evil-emacs-state-cursor   `(,(face-background 'spaceline-evil-emacs   nil t) box)
+          evil-insert-state-cursor  `(,(face-background 'spaceline-evil-insert  nil t) bar)
+          evil-motion-state-cursor  `(,(face-background 'spaceline-evil-motion  nil t) box)
+          evil-normal-state-cursor  `(,(face-background 'spaceline-evil-normal  nil t) box)
+          evil-replace-state-cursor `(,(face-background 'spaceline-evil-replace nil t) hbar)
+          evil-visual-state-cursor  `(,(face-background 'spaceline-evil-visual  nil t) hbar)))
+
+  ;; Wrap enable-theme and disable-theme to update the cursor colors
+  ;; whenever the theme changes.
+  (advice-add 'enable-theme  :after 'belak--update-evil-state-cursor-colors)
+  (advice-add 'disable-theme :after 'belak--update-evil-state-cursor-colors)
+
+  (belak--update-evil-state-cursor-colors))
 
 ;; Add gc for commenting
 
