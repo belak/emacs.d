@@ -14,5 +14,9 @@
   ("C-h k" 'helpful-key)
   ("C-h ." 'helpful-at-point))
 
+(use-package paradox
+  :commands
+  paradox-list-packages)
+
 (provide 'belak-misc)
 ;;; belak-misc.el ends here
