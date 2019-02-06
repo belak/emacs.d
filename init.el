@@ -35,4 +35,7 @@
   (require 'belak-lang-javascript)
   (require 'belak-lang-python)
   (require 'belak-lang-rust)
-  (require 'belak-lang-other))
+  (require 'belak-lang-other)
+
+  ;; Load any miscellaneous packages
+  (require 'belak-misc))
