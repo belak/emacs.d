@@ -34,6 +34,8 @@
   :diminish anaconda-mode
   :after python
   :hook python-mode
+  :init
+  (setq anaconda-mode-installation-directory "~/.emacs.d/.local/anaconda-mode")
   :config
   (add-hook 'anaconda-mode-hook 'anaconda-eldoc-mode))
 
